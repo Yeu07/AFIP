@@ -5,7 +5,7 @@ from datetime import datetime
 
 st.set_page_config(page_title="Procesador de CSV", page_icon="📊")
 
-st.title("🚀 Procesador de CSV Culiao")
+st.title("🚀 Procesador de CSV AFIP")
 st.write("Sube tu archivo y descarga el resultado con formato Unix (LF).")
 
 uploaded_file = st.file_uploader("Elegir archivo CSV", type=['csv'])
