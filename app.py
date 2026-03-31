@@ -28,7 +28,7 @@ st.set_page_config(page_title="Procesador de CSV", page_icon="📊")
 
 st.title("Procesador de CSV ARCA")
 st.write("Subí tu archivo.")
-set_footer("© Filet,Martín y Silva, Yeumen")
+set_footer("© Filet, Martín y Silva, Yeumen")
 
 uploaded_file = st.file_uploader("Elegir archivo CSV", type=['csv'])
 
