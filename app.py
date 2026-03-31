@@ -26,7 +26,7 @@ def set_footer(text):
 
 st.set_page_config(page_title="Procesador de CSV", page_icon="📊")
 
-st.title("Procesador de CSV ARCA")
+st.title("🖥️ Procesador de CSV ARCA")
 st.write("Subí tu archivo.")
 set_footer("© Filet, Martín y Silva, Yeumen")
 
