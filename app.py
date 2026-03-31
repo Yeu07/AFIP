@@ -3,10 +3,32 @@ import pandas as pd
 import io
 from datetime import datetime
 
+def set_footer(text):
+    footer = f"""
+    <style>
+    .footer {{
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: transparent;
+        color: grey;
+        text-align: left;
+        padding: 10px;
+        z-index: 9999;
+    }}
+    </style>
+    <div class="footer">
+        <p>{text}</p>
+    </div>
+    """
+    st.markdown(footer, unsafe_allow_html=True)
+
 st.set_page_config(page_title="Procesador de CSV", page_icon="📊")
 
 st.title("Procesador de CSV ARCA")
 st.write("Subí tu archivo.")
+set_footer("© Filet,Martínn y´Silva, Yeumen")
 
 uploaded_file = st.file_uploader("Elegir archivo CSV", type=['csv'])
 
@@ -59,7 +81,10 @@ if uploaded_file is not None:
         st.info("Vista previa de los datos procesados:")
         st.dataframe(df.head())
 
-        st.write("Yeu y Martin")
+
+
 
     except Exception as e:
         st.error(f"Hubo un error: {e}")
+
+
